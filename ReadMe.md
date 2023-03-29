@@ -1,4 +1,4 @@
-#1. Objectives
+#h1 1. Objectives
     The objectives of this project are for students to have some hands-on experiences of graphics
     programming and to develop a graphics application. Students are given a Python/OpenGL
     program with a virtual jeep game and asked to extend this program to provide additional features.
