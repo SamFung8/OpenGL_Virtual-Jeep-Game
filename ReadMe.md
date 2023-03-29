@@ -4,13 +4,13 @@
     program with a virtual jeep game and asked to extend this program to provide additional features.
 
 <h1> 2. Basic Requirements </h1>
-    -<h2>2.1.  Creating new objects (10 marks) </h2>
-        -<p>Create or import at least one new object with color,material,texture properties and put
-        it them at suitable locations.</p>
+    2.1. Creating new objects (10 marks)
+            Create or import at least one new object with color,material,texture properties and put
+            it them at suitable locations.
 
-    <h2>2.2. Menu and Lighting (10 marks)</h2>
-    <p>Add a pop-up menu to switch between different light properties (ambient, diffuse, specular
-    and position, point lights, directional lights, spotlights).</p>
+    2.2. Menu and Lighting (10 marks)
+            Add a pop-up menu to switch between different light properties (ambient, diffuse, specular
+            and position, point lights, directional lights, spotlights).
 
     <h2>2.3. Manipulation (10 marks)</h2>
     Use keyboard/mouse to manipulate an object (size, position and angle) and the camera
