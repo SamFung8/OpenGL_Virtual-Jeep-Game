@@ -7,7 +7,6 @@
     2.1. Creating new objects (10 marks)
             Create or import at least one new object with color,material,texture properties and put
             it them at suitable locations.
-
     2.2. Menu and Lighting (10 marks)
             Add a pop-up menu to switch between different light properties (ambient, diffuse, specular
             and position, point lights, directional lights, spotlights).
