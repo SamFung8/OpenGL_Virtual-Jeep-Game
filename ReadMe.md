@@ -4,8 +4,8 @@
     program with a virtual jeep game and asked to extend this program to provide additional features.
 
 <h1> 2. Basic Requirements </h1>
-    &nbsp;&nbsp;<h2>2.1.  Creating new objects (10 marks) </h2>
-        <p>Create or import at least one new object with color/material/texture properties and put
+    -<h2>2.1.  Creating new objects (10 marks) </h2>
+        -<p>Create or import at least one new object with color/material/texture properties and put
         it/them at suitable locations.</p>
 
     <h2>2.2. Menu and Lighting (10 marks)</h2>
