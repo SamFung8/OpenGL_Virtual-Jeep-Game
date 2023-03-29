@@ -4,7 +4,7 @@ programming and to develop a graphics application. Students are given a Python/O
 program with a virtual jeep game and asked to extend this program to provide additional features.
 
 <h1> 2. Basic Requirements </h1>
-<h2>2.1. Creating new objects (10 marks)</h2>
+> 2.1. Creating new objects (10 marks)
 Create or import at least one new object with color,material,texture properties and put
 it them at suitable locations.
 
