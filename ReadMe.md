@@ -3,8 +3,8 @@
     programming and to develop a graphics application. Students are given a Python/OpenGL
     program with a virtual jeep game and asked to extend this program to provide additional features.
 
-#2. Basic Requirements
-    ##2.1.  Creating new objects (10 marks)
+<h1> 2. Basic Requirements </h1>
+    <h2>2.1.  Creating new objects (10 marks) </h2>
     Create or import at least one new object with color/material/texture properties and put
     it/them at suitable locations.
 
