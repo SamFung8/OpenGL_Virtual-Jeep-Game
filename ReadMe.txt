@@ -1,13 +1,28 @@
-Installation and Execution:
+#1. Objectives
+    The objectives of this project are for students to have some hands-on experiences of graphics
+    programming and to develop a graphics application. Students are given a Python/OpenGL
+    program with a virtual jeep game and asked to extend this program to provide additional features.
 
-Method 1 (directly run the .exe file):
-Step1: Download and unzip the file
-Step2: Run main.exe in \src file
+#2. Basic Requirements
+    ##2.1.  Creating new objects (10 marks)
+    Create or import at least one new object with color/material/texture properties and put
+    it/them at suitable locations.
 
-Method 2 (install corresponding library and python version 2.7):
-Step1: Download and unzip the file
-Step2: Download and install Anaconda for the website https://www.anaconda.com/
-Step3: Create a virtual environment of python 2.7 in Anaconda
-Step4: Open created virtual environment in Anaconda and run the command “cd [file download path + \src]”
-Step5: Run the command “pip install -r requirements.txt”
-Step6: Run the command “python main.py”
+    ##2.2. Menu and Lighting (10 marks)
+    Add a pop-up menu to switch between different light properties (ambient, diffuse, specular
+    and position, point lights, directional lights, spotlights).
+
+    ##2.3. Manipulation (10 marks)
+    Use keyboard/mouse to manipulate an object (size, position and angle) and the camera
+    (position, angle and zoom-in/out).
+
+    ##2.4. Adding autonomous objects (10 marks)
+    Set an object to move around automatically and react to the environment (e.g. light).
+
+    ##2.5. Window resolution (10 marks)
+    Allow user to set/select the window resolution, enable/disable full screen mode before or
+    during the application.
+
+    ##2.6. Accelerating ribbon (10 marks)
+    Set an accelerating ribbon on the road, and the jeep can be accelerated after passing the
+    ribbon.
