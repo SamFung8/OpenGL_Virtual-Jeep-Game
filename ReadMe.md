@@ -8,7 +8,7 @@ program with a virtual jeep game and asked to extend this program to provide add
 Create or import at least one new object with color,material,texture properties and put
 it them at suitable locations.
 
-2.2. Menu and Lighting (10 marks)
+<h2>2.2. Menu and Lighting (10 marks)</h2>
 Add a pop-up menu to switch between different light properties (ambient, diffuse, specular
 and position, point lights, directional lights, spotlights).
 
