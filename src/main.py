@@ -425,8 +425,9 @@ def mouseHandle(button, state, x, y):
         midDown = False    
         
 def motionHandle(x,y):
-    global nowX, nowY, angle, eyeX, eyeY, eyeZ, phi
-    if (midDown == True):
+    global nowX, nowY, angle, eyeX, eyeY, eyeZ, phi, cameraView
+    if (midDown == True and cameraView):
+        print cameraView
         pastX = nowX
         pastY = nowY 
         nowX = x
@@ -446,10 +447,10 @@ def motionHandle(x,y):
         eyeY = radius * math.sin(phi)            
         
         
-    if centered == False:
-        setView()
-    elif centered == True:
-        setObjView()
+        if centered == False:
+            setView()
+        elif centered == True:
+            setObjView()
     #print eyeX, eyeY, eyeZ, nowX, nowY, radius, angle, phi
     #print "getting handled"
 
@@ -490,6 +491,9 @@ def specialKeys(keypress, mX, mY):
         elif keypress == GLUT_KEY_RIGHT:
             print "Right pushed!"
             jeepObj.posX = jeepObj.posX - 0.5
+        elif keypress == GLUT_KEY_DOWN:
+            print "Down pushed!"
+            jeepObj.posZ = jeepObj.posZ - 0.5
         
         # Refresh look at view
         setObjView()
@@ -503,7 +507,7 @@ def myKeyboard(key, mX, mY):
         if helpWindow == False:
             helpWindow = True
             glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH)
-            glutInitWindowSize(500,300)
+            glutInitWindowSize(800,600)
             glutInitWindowPosition(600,0)
             helpWin = glutCreateWindow('Help Guide')
             glutDisplayFunc(showHelp)
@@ -606,7 +610,7 @@ def mainMenuList(value):
         sys.exit()
             
 def viewPointMenuList(value):
-    global topView, behindView
+    global topView, behindView, cameraView
     
     if value == 1:
         topView = True
@@ -649,7 +653,7 @@ def lightingMenuList(value):
         glEnable(GL_LIGHT2)
         glEnable(GL_LIGHT1)
         glDisable(GL_LIGHT0)
-        drawSun=True
+        drawSun=False
 
              
     setObjView()
@@ -784,7 +788,7 @@ def gameOver():
     #RankingTable.getTable()
     glutHideWindow()
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH)
-    glutInitWindowSize(200,200)
+    glutInitWindowSize(600,600)
     glutInitWindowPosition(600,100)
     overWin = glutCreateWindow("Game Over!")
     glutDisplayFunc(overScreen)
@@ -798,7 +802,7 @@ def gameSuccess():
     recordGame() #add to excel
     glutHideWindow()
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGBA | GLUT_DEPTH)
-    glutInitWindowSize(200,200)
+    glutInitWindowSize(600,600)
     glutInitWindowPosition(600,100)
     overWin = glutCreateWindow("Complete!")
     glutDisplayFunc(winScreen)
@@ -809,14 +813,16 @@ def winScreen():
     glColor3f(0.0,1.0,0.0)
     drawTextBitmap("Completed Trial!" , -0.6, 0.85)
     glColor3f(0.0,1.0,0.0)
-    drawTextBitmap("Your score is: ", -1.0, 0.0)
+    drawTextBitmap("Your get " + str(StarScore) + " star(s) and time needed " + str(finalScore) + "s.", -1.0, 0.0)
     glColor3f(1.0,1.0,1.0)
-    drawTextBitmap(str(finalScore), -1.0, -0.15)
+    drawTextBitmap("p.s. System only record top 10 result.", -1.0, -0.15)
     glutSwapBuffers()
     displayRanking()
 
 
 def overScreen():
+    global  StarScore, finalScore
+
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glColor3f(1.0,0.0,1.0)
     drawTextBitmap("Incomplete Trial" , -0.6, 0.85)
@@ -825,18 +831,22 @@ def overScreen():
     glColor3f(1.0,1.0,1.0)
     drawTextBitmap(overReason, -1.0, 0.35)
     glColor3f(0.0,1.0,0.0)
-    drawTextBitmap("Your score stopped at: ", -1.0, 0.0)
+    drawTextBitmap("Your get " + str(StarScore) + " star(s) and time needed " + str(finalScore) + "s.", -1.0, 0.0)
     glColor3f(1.0,1.0,1.0)
-    drawTextBitmap(str(finalScore), -1.0, -0.15)
+    drawTextBitmap("p.s. System only record top 10 result.", -1.0, -0.15)
     glutSwapBuffers()
     displayRanking()
 
 def showHelp():
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT)
     glColor3f(1.0,0.0,0.0)
-    drawTextBitmap("Help Guide" , -0.2, 0.85)
+    drawTextBitmap("Help Guide" , -0.1, 11)
     glColor3f(0.0,0.0,1.0)
-    drawTextBitmap("describe your control strategy." , -1.0, 0.7)
+    drawTextBitmap("1. Move the jeep using keyboard: left, right, up, down" , 8, 9)
+    drawTextBitmap("2. Chang screen size using keyboard: 1", 9, 7.5)
+    drawTextBitmap("3. Using mouse scroll to zoom in or zoom out in camera view", 10, 6)
+    drawTextBitmap("4. Hold the mouse and right-click moving the viewpoint in a 3D way in camera view", 11, 4)
+    drawTextBitmap("5. Right-click to open menu setting", 12.5, 2)
     glutSwapBuffers()
     
 def displayRanking():
