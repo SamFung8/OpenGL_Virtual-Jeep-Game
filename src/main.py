@@ -369,7 +369,7 @@ def idle():#--------------with more complex display items like turning wheel---
         prevTime = curTime
         score = curTime/1000 - startTime
      
-    if drawSun:            
+    if drawSun:
         sunAngle = sunAngle + 0.05
         sunRx = sunZ * math.sin(math.radians(sunAngle)) + sunX * math.cos(math.radians(sunAngle))
         sunRz = sunZ * math.cos(math.radians(sunAngle)) - sunX * math.sin(math.radians(sunAngle))
