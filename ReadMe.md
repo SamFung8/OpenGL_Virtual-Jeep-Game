@@ -31,3 +31,11 @@ Set an accelerating ribbon on the road, and the jeep can be accelerated after pa
 
 When the game end, if the player can get the better result of the current top 10 ranking it will record and show the result.
 
+# **How to play**
+
+1. Move the jeep using keyboard: left, right, up, down
+2. Chang screen size using keyboard: 1
+3. Using mouse scroll to zoom in or zoom out in camera view
+4. Hold the mouse and right-click moving the viewpoint in a 3D way in camera view
+5. Right-click to open menu setting
+
