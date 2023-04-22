@@ -35,7 +35,7 @@ When the game end, if the player can get the better result of the current top 10
 
 1. Move the jeep using keyboard: left, right, up, down
 2. Chang screen size using keyboard: 1
-3. Using mouse scroll to zoom in or zoom out in camera view
+3. Using mouse scroll to zoom in or zoom out
 4. Hold the mouse and right-click moving the viewpoint in a 3D way in camera view
 5. Right-click to open menu setting
 
