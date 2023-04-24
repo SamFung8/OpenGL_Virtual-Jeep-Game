@@ -48,9 +48,9 @@ I have deployed the .py file which is an easy way to run the programs without th
 
 Method 2 (install corresponding library and python version 2.7):
 
-Step1: Download and unzip the file
-Step2: Download and install Anaconda for the website https://www.anaconda.com/
-Step3: Create a virtual environment of python 2.7 in Anaconda
-Step4: Open created virtual environment in Anaconda and run the command “cd [file download path + \src]”
-Step5: Run the command “pip install -r requirements.txt”
-Step6: Run the command “python main.py”
+1. Step1: Download and unzip the file
+2. Step2: Download and install Anaconda for the website https://www.anaconda.com/
+3. Step3: Create a virtual environment of python 2.7 in Anaconda
+4. Step4: Open created virtual environment in Anaconda and run the command “cd [file download path + \src]”
+5. Step5: Run the command “pip install -r requirements.txt”
+6. Step6: Run the command “python main.py”
