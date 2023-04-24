@@ -39,3 +39,18 @@ When the game end, if the player can get the better result of the current top 10
 4. Hold the mouse and right-click moving the viewpoint in a 3D way in camera view
 5. Right-click to open menu setting
 
+# **How to run**
+
+Method 1 (directly run the .exe file):
+
+I have deployed the .py file which is an easy way to run the programs without the requirement of installing any libraries, packages or downloading python on your computer. You can find the .exe file in src/main.exe.
+
+
+Method 2 (install corresponding library and python version 2.7):
+
+Step1: Download and unzip the file
+Step2: Download and install Anaconda for the website https://www.anaconda.com/
+Step3: Create a virtual environment of python 2.7 in Anaconda
+Step4: Open created virtual environment in Anaconda and run the command “cd [file download path + \src]”
+Step5: Run the command “pip install -r requirements.txt”
+Step6: Run the command “python main.py”
